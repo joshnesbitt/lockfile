@@ -1,0 +1,27 @@
+= Ruby Lock File
+
+A simple Lock File class written in Ruby.
+
+http://en.wikipedia.org/wiki/Lock_file#Lock_files
+
+Use it like this:
+
+  l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock" containing the PID
+
+  l.locked? # => false
+  
+  l.lock! # => Integer value
+  
+  l.locked? # => true
+  
+  l.process_id # => PID
+  
+  l.unlock! # => Integer value
+  
+  l.locked? # => false
+  
+I commonly use it for checking whether an expensive task is being executed, like so:
+
+  reindex_search_index unless lockfile.locked?
+
+Which would create and remove a lock file at the beginning and end of the "reindex_search_index" task.
