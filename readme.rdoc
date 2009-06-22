@@ -6,7 +6,7 @@ http://en.wikipedia.org/wiki/Lock_file#Lock_files
 
 Use it like this:
 
-  l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock" containing the PID
+  l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock"
 
   l.locked? # => false
   
@@ -20,8 +20,18 @@ Use it like this:
   
   l.locked? # => false
   
-I commonly use it for checking whether an expensive task is being executed, like so:
+I commonly use it for checking whether an expensive task is being executed:
 
-  reindex_search_index unless lockfile.locked?
+  refresh_search_index unless lockfile.locked?
+  
+And in the method something like this:
 
-Which would create and remove a lock file at the beginning and end of the "reindex_search_index" task.
+  def refresh_search_index
+    l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock"
+    
+    # do intensive operation
+    
+    l.unlock!
+  end
+
+Copyright (c) 2009 Josh Nesbitt <josh@josh-nesbitt.net> under MIT-LICENSE.
