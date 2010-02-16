@@ -10,7 +10,7 @@ class LockFile
   end
   
   def process_id
-    locked? ? read_lockfile(self.qualified_path) : nil
+    locked? ? read_lockfile(self.qualified_path).strip.to_i : nil
   end
 
   def lock!
@@ -44,7 +44,7 @@ class LockFile
 
   def read_lockfile(lockfile)
     begin
-      File.open(lockfile, "r").gets { |l| puts l }
+      File.open(lockfile, "r").gets
     rescue
       raise LockFileMissing
     end
