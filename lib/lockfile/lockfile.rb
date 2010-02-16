@@ -59,11 +59,11 @@ class LockFile
   end
 
   public
-  class FileError < StandardError #:nodoc:
+  class LockFileError < StandardError #:nodoc:
   end
-  class LockFileExists < FileError #:nodoc:
+  class LockFileExists < LockFileError #:nodoc:
   end  
-  class LockFileMissing < FileError #:nodoc:
+  class LockFileMissing < LockFileError #:nodoc:
   end  
 
 end
