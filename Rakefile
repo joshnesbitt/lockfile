@@ -4,9 +4,9 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "lockfile"
-    gem.summary = %Q{A simple Lock File class written in Ruby.}
-    gem.description = %Q{A simple Lock File class written in Ruby.}
+    gem.name = "simple_lockfile"
+    gem.summary = %Q{A simple Lock File implementation.}
+    gem.description = %Q{A simple Lock File implementation.}
     gem.email = "josh@josh-nesbitt.net"
     gem.homepage = "http://github.com/joshnesbitt/lockfile"
     gem.authors = ["Josh Nesbitt"]
