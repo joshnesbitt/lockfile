@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{A simple Lock File implementation.}
     gem.description = %Q{A simple Lock File implementation.}
     gem.email = "josh@josh-nesbitt.net"
-    gem.homepage = "http://github.com/joshnesbitt/lockfile"
+    gem.homepage = "http://blog.josh-nesbitt.net/2009/09/08/implementing-a-simple-lockfile-system-in-ruby/"
     gem.authors = ["Josh Nesbitt"]
     gem.files = ["lib/**/*.rb"]
     gem.require_paths = ["lib"]
