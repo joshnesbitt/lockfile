@@ -50,6 +50,8 @@ Specs are run using Watchr (http://github.com/mynyml/watchr) to observe the /lib
 
   watchr spec/watch.rb
 
+You don't have to use Watchr to run the specs, I just prefer to use it over autotest as its lightweight, quick and works. You could just run the specs normally.
+
 == Note on Patches/Pull Requests
 
 * Fork the project.
