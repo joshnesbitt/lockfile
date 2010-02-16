@@ -1,14 +1,3 @@
-# ------------------------------------------------------
-# LockFile: Implements the idea of a lockfile in Ruby
-# ------------------------------------------------------
-# Usage:
-# l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock" containing the PID
-# l.locked? # => false
-# l.lock! # => Integer value
-# l.locked? # => true
-# l.process_id # => PID
-# l.unlock! # => Integer value
-# l.locked? # => false
 class LockFile
   attr_accessor :path, :filename, :qualified_path
 
