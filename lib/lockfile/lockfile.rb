@@ -1,5 +1,5 @@
 class LockFile
-  attr_accessor :path, :filename, :qualified_path
+  attr_accessor :path, :filename
 
   def initialize(path="/tmp", filename="lockfile.lock")
     @path, @filename = path, filename
@@ -59,11 +59,11 @@ class LockFile
   end
 
   public
-  class LockFileError < StandardError #:nodoc:
+  class LockFileError < StandardError
   end
-  class LockFileExists < LockFileError #:nodoc:
+  class LockFileExists < LockFileError
   end  
-  class LockFileMissing < LockFileError #:nodoc:
+  class LockFileMissing < LockFileError
   end  
 
 end
