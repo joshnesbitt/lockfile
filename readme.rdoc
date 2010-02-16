@@ -1,10 +1,10 @@
-= Ruby Lock File
+= LockFile
 
 A simple Lock File class written in Ruby.
 
 http://en.wikipedia.org/wiki/Lock_file#Lock_files
 
-== Use it like this:
+== Usage:
 
   l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock"
 
@@ -34,6 +34,20 @@ And in the method something like this:
     l.unlock!
   end
 
+== Testing
+
+Coming soon.
+
+== Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
 == Copyright
 
-Copyright (c) 2009 Josh Nesbitt <josh@josh-nesbitt.net> under MIT-LICENSE.
+Copyright (c) 2010 Josh Nesbitt <josh@josh-nesbitt.net>. See LICENSE for details.
