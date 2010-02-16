@@ -22,16 +22,16 @@ http://en.wikipedia.org/wiki/Lock_file#Lock_files
   
 I commonly use it for checking whether an expensive task is being executed:
 
-  refresh_search_index unless lockfile.locked?
+  refresh_search_index unless @lockfile.locked?
   
 And in the method something like this:
 
   def refresh_search_index
-    l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock"
+    @lockfile.lock!
     
-    # do intensive operation
+    # ... some heavy operation ...
     
-    l.unlock!
+    @lockfile.unlock!
   end
 
 == Testing
