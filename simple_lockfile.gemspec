@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simple_lockfile}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josh Nesbitt"]
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
     "lib/lockfile.rb",
      "lib/lockfile/lockfile.rb"
   ]
-  s.homepage = %q{http://github.com/joshnesbitt/lockfile}
+  s.homepage = %q{http://blog.josh-nesbitt.net/2009/09/08/implementing-a-simple-lockfile-system-in-ruby/}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
