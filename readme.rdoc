@@ -50,6 +50,10 @@ Specs are run using Watchr (http://github.com/mynyml/watchr) to observe the /lib
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
+== Contributors
+
+* Greg Fitzgerald (http://github.com/gregf) - Gemification of LockFile.
+
 == Copyright
 
 Copyright (c) 2010 Josh Nesbitt <josh@josh-nesbitt.net>. See LICENSE for details.
