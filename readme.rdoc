@@ -4,8 +4,18 @@ A simple Lock File class written in Ruby.
 
 http://en.wikipedia.org/wiki/Lock_file#Lock_files
 
+== Installation
+
+From Gemcutter:
+
+  gem install simple_lockfile
+
+The project page is located at http://gemcutter.org/gems/simple_lockfile.
+
 == Usage:
 
+  require 'lockfile'
+  
   l = LockFile.new("/Users/joshnesbitt/Desktop", "test.lock") # => "/Users/joshnesbitt/Desktop/test.lock"
 
   l.locked? # => false
