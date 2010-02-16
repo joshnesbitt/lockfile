@@ -6,7 +6,7 @@ class LockFile
   end
   
   def qualified_path
-    "#{@path}/#{@filename}"
+    File.join(@path, @filename)
   end
   
   def process_id
