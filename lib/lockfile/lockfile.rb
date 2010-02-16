@@ -4,19 +4,11 @@ class LockFile
   def initialize(path="/tmp", filename="lockfile.lock")
     @path, @filename = path, filename
   end
-
-  def path
-    @path
-  end
-
-  def filename
-    @filename
-  end
-
+  
   def qualified_path
     "#{@path}/#{@filename}"
   end
-
+  
   def process_id
     locked? ? read_lockfile(self.qualified_path) : nil
   end

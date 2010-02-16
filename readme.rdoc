@@ -36,7 +36,9 @@ And in the method something like this:
 
 == Testing
 
-Coming soon.
+Specs are run using Watchr (http://github.com/mynyml/watchr) to observe the @/lib@ directory for any changes. Once installed simply do:
+
+  watchr spec/watch.rb
 
 == Note on Patches/Pull Requests
 
